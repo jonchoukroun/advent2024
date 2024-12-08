@@ -12,7 +12,7 @@ int problem2(int* arrA, int* arrB, int arrSize);
 
 int main(void)
 {
-    FILE* csv = fopen("./day1-nput.csv", "r");
+    FILE* csv = fopen("./day1-input.csv", "r");
     if (csv == NULL) {
         printf("Failed to open csv\n");
         return -1;
@@ -39,6 +39,11 @@ int main(void)
         arrB[i] = iB;
 
         i++;
+    }
+
+    if (fclose(csv) != 0) {
+        printf("Failed to close file\n");
+        return -1;
     }
 
     printf("Problem 1 = %d\n", problem1(arrA, arrB, arrSize));
