@@ -12,7 +12,7 @@ int problem2(int* arrA, int* arrB, int arrSize);
 
 int main(void)
 {
-    FILE* csv = fopen("./day1-a-input.csv", "r");
+    FILE* csv = fopen("./day1-nput.csv", "r");
     if (csv == NULL) {
         printf("Failed to open csv\n");
         return -1;
